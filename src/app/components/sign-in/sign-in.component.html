@@ -1,0 +1,24 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="con">
+  <header class="head-form">
+    <h2>Log In</h2>
+    <p>login here using your email and password</p>
+  </header>
+  <br>
+
+  <div class="field-set">
+    <input class="form-input" type="text" name="emailAdress" placeholder="name@mail.com" required [(ngModel)]="emailAdress">
+    <br>
+
+    <input class="form-input" type="password" name="password" placeholder="Password" required minlength="10" [(ngModel)]="password">
+    <br>
+
+    <button type="submit" [disabled]="form.invalid">Sign in</button>
+  </div>
+
+    <span class="other">
+      <span class="frgt-pass" routerLink="/register">Forgot Password</span>
+      <button class="sign-up" routerLink="/register">Sign Up</button>
+    </span>
+  </div>
+</form>

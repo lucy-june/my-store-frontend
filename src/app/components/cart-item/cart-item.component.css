@@ -1,0 +1,20 @@
+img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.cart-item-container {
+  display: flex;
+  justify-content:space-around;
+  align-items: flex-start;
+  margin-top: 10px;
+  border-bottom: solid;
+  border-color: rgb(85,192,196, 0.4);
+}
+
+.cart-item {
+  /* border:solid; */
+  padding: 10px 1em 20px;
+  flex: 1;
+}
+

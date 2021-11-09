@@ -1,0 +1,22 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="con">
+    <header class="head-form">
+      <h2>Create Account</h2>
+      <p>Welcome to Lucy's store</p>
+    </header>
+    <br>
+
+    <div class="field-set">
+      <input class="form-input" type="text" name="username" placeholder="Create name" required [(ngModel)]="username">
+      <br>
+
+      <input class="form-input" type="text" name="emailAdress" placeholder="name@mail.com" required [(ngModel)]="emailAdress">
+      <br>
+
+      <input class="form-input" type="password" name="password" placeholder="Should not be same as email or login" required minlength="10" [(ngModel)]="password">
+      <br>
+
+      <button type="submit" [disabled]="form.invalid">Create Account</button>
+    </div>
+  </div>
+</form>

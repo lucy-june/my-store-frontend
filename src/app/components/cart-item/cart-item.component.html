@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<div class="cart-item-container font-weight-normal">
+  <div class="cart-item">
+    <img [src]="product.url">
+  </div>
+
+  <div class="cart-item">
+    <span>{{ product.name }}</span>
+  </div>
+
+  <div class="cart-item">
+    <span>${{ product.price }}</span>
+  </div>
+
+  <div class="cart-item btn-group">
+    <button class="btn btn-outline-info btn-sm" (click)="addItemButton(product)">+</button>
+    <button class="btn btn-outline-info btn-sm">{{ product.quantity }}</button>
+    <button class="btn btn-outline-info btn-sm" (click)="reduceItemButton(product)">-</button>
+  </div>
+
+  <div class="cart-item">
+    <span>${{ amount }}</span>
+  </div>
+
+  <div class="cart-item">
+    <button class="btn btn-outline-info btn-sm" (click)="delete(product)"><i class="fas fa-trash-alt"></i></button>
+  </div>
+
+</div>
+

@@ -1,0 +1,30 @@
+<div class="container text-center">
+  <div class="cart-head font-weight-bolder">
+    <div class="cart-head-item"><span>Your Cart</span></div>
+    <div class="cart-head-item"><span>product</span></div>
+    <div class="cart-head-item"><span>price</span></div>
+    <div class="cart-head-item"><span>QTY</span></div>
+    <div class="cart-head-item"><span>Amount</span></div>
+    <div class="cart-head-item"></div>
+  </div>
+
+  <div class="cart-item">
+    <app-cart-item *ngFor="let product of cartItems" [product]="product" (deleteProduct)="deleteProduct($event)" (addProduct)="addProduct($event)" (reduceProduct)="reduceProduct($event)"></app-cart-item>
+  </div>
+
+  <div class="cart-footer">
+    <div></div>
+    <div></div>
+    <div>
+      <span class="font-weight-normal">Total Price: {{ totalPrice }}</span>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div></div>
+    <div></div>
+    <div>
+      <button class="btn btn-info check-out" routerLink="/cart/check-out">Check Out</button>
+    </div>
+  </div>
+
+</div>

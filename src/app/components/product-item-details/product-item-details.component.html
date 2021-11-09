@@ -1,0 +1,15 @@
+<div *ngIf="product" class="detail-container">
+  <img [src]="product.url">
+  <div class="detail-item">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price}}</h4>
+    <p>{{ product.description }}</p>
+    <select class="select-input" [(ngModel)]="selectedQuantity">
+      <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+    </select>
+    <br>
+    <button class="btn btn-info" (click)="addToCart(product)">Add to cart</button>
+    <br>
+    <a class="back-link" routerLink="/">back to product list</a>
+  </div>
+</div>

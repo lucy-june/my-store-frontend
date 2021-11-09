@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<div class="nav-bar">
+  <div class="home">
+    <a routerLink="/">Home</a>
+  </div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+
+    <button class="btn btn-info myAccount-button" ngbDropdownToggle><i class="fas fa-user-circle home"><p>{{ userName }}</p></i></button>
+    <!-- <i class="fas fa-user-circle " ngbDropdownToggle> <p>{{ userName }}</p></i> -->
+
+    <div class="dropdown-menu" ngbDropdownMenu>
+      <button class="dropdown-button" ngbDropdownItem><a routerLink="/register">Register</a></button>
+      <button class="dropdown-button" ngbDropdownItem><a routerLink="/signIn">Log in</a></button>
+      <button class="dropdown-button" ngbDropdownItem><a (click)="logout()">Log out</a></button>
+    </div>
+  </div>
+
+  <div class="cart">
+    <a routerLink="/cart"><i class="fas fa-shopping-cart">Cart</i></a>
+  </div>
+</div>
