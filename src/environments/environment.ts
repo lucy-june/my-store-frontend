@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host: 'localhost',
+  host: '18.118.194.231',
   port: 3000
 };
 
