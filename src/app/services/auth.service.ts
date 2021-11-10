@@ -4,12 +4,13 @@ import { User } from '../models/User';
 import {shareReplay } from 'rxjs/operators';
 import * as moment from 'moment';
 import 'rxjs/add/operator/do';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  endpoint: string = 'http://localhost:3000/users';
+  endpoint: string = `http://${environment.host}:${environment.port}/users`;
 
   constructor(
     private http: HttpClient

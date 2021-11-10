@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Product } from '../models/Product';
 
 @Injectable({
@@ -14,6 +15,7 @@ export class CartService {
   userId: string;
   token: string;
   cartId: string;
+  endpoint: string = `http://${environment.host}:${environment.port}`;
 
 
   constructor(private http: HttpClient) {
@@ -26,7 +28,7 @@ export class CartService {
     // window.alert("cartService-product:" + JSON.stringify(product));
     // window.alert("items:" + JSON.stringify(this.items));
     if (this.cartId === null) {
-      this.http.post('http://localhost:3000/carts', {token: this.token, userId: this.userId}).subscribe(
+      this.http.post(this.endpoint + '/carts', {token: this.token, userId: this.userId}).subscribe(
         (res: any) => {
           console.log("create new cart successful!" + JSON.stringify(res));
           console.log("create new cart successful!" + res.cart_id);
@@ -38,7 +40,7 @@ export class CartService {
         }
       )
     } else if (this.cartId !== null) {
-      this.http.post(`http://localhost:3000/carts/${this.cartId}/products`, {productId: product.id, quantity: product.quantity}).subscribe(
+      this.http.post(this.endpoint + `/carts/${this.cartId}/products`, {productId: product.id, quantity: product.quantity}).subscribe(
         (res: any) => {
           console.log("add product successfully!" + JSON.stringify(res));
           this.getItems();
@@ -63,7 +65,7 @@ export class CartService {
 
   getRequest(): Observable<(Product | any)[]> {
     console.log("this.userId: " + this.userId , "this.cartId:" + this.cartId)
-    return this.http.get<any>(`http://localhost:3000/users/${this.userId}/cart/${this.cartId}/products`);
+    return this.http.get<any>(this.endpoint + `/users/${this.userId}/cart/${this.cartId}/products`);
   }
 
   getItems(): Product[] {

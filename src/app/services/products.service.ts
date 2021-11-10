@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,13 +10,14 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ProductsService {
   products: Product[];
+  endpoint: string = `http://${environment.host}:${environment.port}`;
 
   constructor(private http: HttpClient) {
     this.products = [];
   }
 
   getRequest(): Observable<(Product | any)[]> {
-    return this.http.get<Product[]>("http://localhost:3000/products");
+    return this.http.get<Product[]>(this.endpoint + "/products");
   }
 
   // getProductById(productId: number): Product {
