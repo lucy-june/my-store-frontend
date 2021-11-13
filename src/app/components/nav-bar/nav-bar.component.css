@@ -1,4 +1,4 @@
-.nav-bar {
+/* .nav-bar {
   display: flex;
   flex-direction: row;
   justify-content:stretch;
@@ -6,35 +6,44 @@
   background: #50bec2;
   color: #fff;
   padding: 10px 50px 10px 50px;
+} */
+/* .navbar {
+  background: #50bec2;
+} */
+.navbar-brand > img
+{
+   height: 60;
+   width: auto;
+   max-height: 100%;
+   padding: 0;
 }
-
-.nav-bar div {
+/* .nav-bar div {
   flex: 1;
   /* border: solid; */
-  padding: 1em 1em 1em 1em;
-}
+  /*padding: 1em 1em 1em 1em;
+}*/
 
-a {
+/* a {
   color: #ffffff;
   font-weight: bold;
-}
+} */
 
-.dropdown-menu {
+/* .dropdown-menu {
   background-color:  #50bec2;
-}
+} */
 
-.myAccount-button {
+/* .myAccount-button {
   padding: 0.5rem 4rem !important;
   background-color: rgb(85,192,196, 0);;
-}
+} */
 
-.cart {
+/* .cart {
   font-size: 30px;
-}
+} */
 
-.home {
+/* .home {
   font-size: 30px;
-}
+} */
 
 
 

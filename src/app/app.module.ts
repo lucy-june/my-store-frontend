@@ -14,7 +14,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 import { ProductItemDetailsComponent } from './components/product-item-details/product-item-details.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 

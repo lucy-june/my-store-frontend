@@ -13,7 +13,7 @@
       <input class="form-input" type="text" name="emailAdress" placeholder="name@mail.com" required [(ngModel)]="emailAdress">
       <br>
 
-      <input class="form-input" type="password" name="password" placeholder="Should not be same as email or login" required minlength="10" [(ngModel)]="password">
+      <input class="form-input" type="password" name="password" placeholder="Password must be 8-20 characters long." required minlength="10" [(ngModel)]="password">
       <br>
 
       <button type="submit" [disabled]="form.invalid">Create Account</button>
