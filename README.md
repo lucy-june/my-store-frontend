@@ -3,6 +3,7 @@ $ ng s
 
 # To start the frontend service in the background
 $ nohup ng s &
+
 When deploy it to production, remember to update the host info in src/environments/...
 
 # Test users:
