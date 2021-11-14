@@ -1,6 +1,9 @@
 # To start the frontend service
 $ ng s
 
+# To start the frontend service in the background
+$ nohup ng s &
+
 # Test users:
 username: gkvoid1@gmail.com
 password: 1234567890
