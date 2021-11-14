@@ -1,10 +1,9 @@
+# To start the frontend service
 $ ng s
 
-
-
-
-
-
+# Test users:
+username: gkvoid1@gmail.com
+password: 1234567890
 
 # MyStoreFrontEnd
 
