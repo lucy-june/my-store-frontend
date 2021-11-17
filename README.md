@@ -2,7 +2,8 @@
 $ ng s
 
 # To start the frontend service in the background
-$ nohup ng s &
+$ sudo npm install -g pm2
+$ pm2 start "ng serve"
 
 When deploy it to production, remember to update the host info in src/environments/...; Please also note, when using ssh to login to a remote linux to deploy the service. Always use Ctrl+D to close the ssh connection, otherwise the background job might be shutdown incorrectly.
 
